@@ -6,7 +6,7 @@ import time
 TOKEN = "8026861100:AAEoy8Si4uVkud-OmVPU9uWNYH_hcIj80EM"
 CHAT_ID = "6086572676"
 
-bot = Bot(token=TOKEN)
+bot = Bot(8026861100:AAEoy8Si4uVkud-OmVPU9uWNYH_hcIj80EM)
 
 async def gui_tin():
   with open(r"C:\Users\skyce\Desktop\59f4fc82-8b52-42a6-9090-fd9e5f1450be (1).jfif", "rb") as photo:
