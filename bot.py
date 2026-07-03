@@ -7,7 +7,7 @@ TOKEN = "8026861100:AAEoy8Si4uVkud-OmVPU9uWNYH_hcIj80EM"
 CHAT_ID = "6086572676"
 bot = Bot(token=TOKEN)
 async def gui_tin():
-  with open("anh.jfif", "rb") as photo:
+  with open("anh.jpg.jfif", "rb") as photo:
         await bot.send_photo(
             chat_id=6086572676,
             photo=photo,
