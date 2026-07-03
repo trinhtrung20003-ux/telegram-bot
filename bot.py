@@ -1,8 +1,11 @@
 from telegram import Bot
 import asyncio
 
+# Token bot Telegram
 TOKEN = "8026861100:AAEoy8Si4uVkud-OmVPU9uWNYH_hcIj80EM"
-CHAT_ID = "6086572676"
+
+# Kênh Telegram
+CHAT_ID = "@sanpcshopee"
 
 bot = Bot(token=TOKEN)
 
