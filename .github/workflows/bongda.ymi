@@ -1,0 +1,41 @@
+name: Bong Da Bot
+
+on:
+  schedule:
+    - cron: "50 17 4 7 *"   # 05/07 00:50 VN
+    - cron: "50 21 4 7 *"   # 05/07 04:50 VN
+    - cron: "50 20 5 7 *"   # 06/07 03:50 VN
+    - cron: "50 0 6 7 *"    # 06/07 07:50 VN
+    - cron: "50 19 6 7 *"   # 07/07 02:50 VN
+    - cron: "50 0 7 7 *"    # 07/07 07:50 VN
+    - cron: "50 16 7 7 *"   # 07/07 23:50 VN
+    - cron: "50 20 7 7 *"   # 08/07 03:50 VN
+    - cron: "50 20 9 7 *"   # 10/07 03:50 VN
+    - cron: "50 19 10 7 *"  # 11/07 02:50 VN
+    - cron: "50 21 11 7 *"  # 12/07 04:50 VN
+    - cron: "50 1 12 7 *"   # 12/07 08:50 VN
+    - cron: "50 19 14 7 *"  # 15/07 02:50 VN
+    - cron: "50 19 15 7 *"  # 16/07 02:50 VN
+    - cron: "50 17 18 7 *"  # 19/07 00:50 VN
+    - cron: "50 19 19 7 *"  # 20/07 02:50 VN
+
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install python-telegram-bot
+
+      - name: Run bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python maibongda.py
