@@ -10,7 +10,7 @@ CHAT_ID = "@sanpcshopee"
 bot = Bot(token=TOKEN)
 
 async def gui_tin():
-    with open("anh.jpg.jfif", "rb") as photo:
+    with open("anh.jpg.png", "rb") as photo:
         await bot.send_photo(
             chat_id=CHAT_ID,
             photo=photo,
